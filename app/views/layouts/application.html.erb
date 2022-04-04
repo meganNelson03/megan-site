@@ -8,6 +8,8 @@
 
     <%= stylesheet_link_tag "application_sass", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= javascript_include_tag "star.js", canvas: 'myCanvas', id: 'myScript', type: 'text/paperscript' %>
   </head>
 
   <body>

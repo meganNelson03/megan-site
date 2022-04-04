@@ -5,6 +5,7 @@ window.$ = jquery
 import "popper";
 import "bootstrap";
 import "slick-carousel";
+import "paper";
 
 // Font awesome Free
 import {far} from "@fortawesome/free-regular-svg-icons"

@@ -8,18 +8,32 @@
                 <div class="bg-image"></div>
             </div>
             <div class="col-7 padded-section-es">
-                <h2 class="section-title">Lorem Ipsum</h2>
-                <p><%= LoremIpsum.lorem_ipsum(words: 100) %></p>
+                <h2 class="section-title">Adaptability and Expertise</h2>
+                <p>
+                I build device-responsive, custom websites using Ruby on Rails, HTML/CSS/JavaScript, and MySQL, with design support from
+                Adobe Photoshop, Illustrator, and InDesign. From initial concept to design to copywriting to deployment to maintenance, I manage every part of the process in close cooperation with my clients. 
+                Whether the project is a bonafide "software application" for the web or a single-page promotional site, I'm always up for the task.
+                I’m adaptable, quick to learn new technologies, and always looking for a challenge.
+                </p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-8"></div>
         <div class="col-4 p-relative">
-            <div class="bg-element square"></div>
+            <canvas class="bg-element square" id="myCanvas" resize></canvas>
         </div>
     </div>
 </section>
+
+<style>
+
+#myCanvas {
+    background: lightgray;
+}
+
+</style>
+
 
 
 <%#= render 'skills' %>
