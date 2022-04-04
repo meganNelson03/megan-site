@@ -4,3 +4,29 @@ body {
     font-family: 'Assistant', sans-serif;
     font-size: 18px;
 }
+
+
+/* Skills Slider */
+
+.skills-slider {
+
+    .slick-slide {
+      margin-left: 20px;
+      margin-right: 20px;
+      & > div {
+        height: 100%;
+      }
+    }
+  
+    .slick-list {
+      margin-left: -20px; /* px size of slide space */
+      width: calc(100% + 40px); /* add double the px size of slide space */
+    }
+  
+    .slide {
+      & > div {
+        height: calc(100% - 10px);
+      }
+    }
+  
+  }

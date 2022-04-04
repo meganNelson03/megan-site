@@ -1,27 +1,124 @@
-<section class="padding-top padding-bottom container">
+<section class="padding-bottom container">
+    <div class="slider-wrapper">
     <div class="skills-slider">
         <div class="slide">
-            <div class="square darkgray"></div>
+            <div class="square centered-content">
+                <h3 class="card-title">Ruby on Rails</h3>
+                <%= image_tag 'icon-ruby.svg' %>
+            </div>
         </div>
         <div class="slide">
-            <div class="square darkgray"></div>
+            <div class="square centered-content">
+                <h3 class="card-title">HTML/CSS</h3>
+                <%= image_tag 'icon-ruby.svg' %>
+            </div>
         </div>
         <div class="slide">
-            <div class="square darkgray"></div>
+            <div class="square centered-content">
+                <h3 class="card-title">JavaScript</h3>
+                <%= image_tag 'icon-ruby.svg' %>
+            </div>
         </div>
         <div class="slide">
-            <div class="square darkgray"></div>
+        <div class="square centered-content">
+            <h3 class="card-title">React</h3>
+            <%= image_tag 'icon-ruby.svg' %>
         </div>
+        </div>
+        <div class="slide">
+        <div class="square centered-content">
+            <h3 class="card-title">Adobe Suite</h3>
+            <%= image_tag 'icon-ruby.svg' %>
+        </div>
+        </div>
+    </div>
     </div>
 </section>
 
+
+
+
 <style>
+
+.slidey {
+    max-width: 100vw;
+    width: 100%;
+    overflow: hidden;
+}
+.skills-slider {
+    display: block;
+}
 
 .square.darkgray {
     background: darkgray;
     width: 100%;
     height: 100px;
 }
+
+.slick-slide {
+    display: inline-block;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+}
+
+.slick-slide {
+      margin-left: 10px;
+      margin-right: 10px;
+}
+.slick-slide > div {
+    height: 100%;
+}
+.slick-list {
+      margin-left: -10px; /* px size of slide space */
+      width: calc(100% + 20px); /* add double the px size of slide space */
+}
+.slide > div {
+        height: calc(100% - 10px);
+}
+
+.card-title {
+    position: relative;
+    z-index: 1;
+}
+
+.card-title:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    background: lightgray;
+    bottom: -5px; left: 0; right: 0;
+    z-index: -1;
+}
+
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.square {
+    background: white;
+    width: 100%;
+    height: 100%;
+}
+
+/* the slides */
+.slick-slide {
+    margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+
 
 </style>
 
@@ -30,16 +127,15 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 
     $(".skills-slider").slick({
-        autoplay: false,
-        autoplaySpeed: 6000,
         infinite: true,
-        cssEase: 'linear',
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
     });
+
+    $(".slidey").slick("refresh");
 })
 
 
