@@ -7,7 +7,7 @@
             <div class="col-5 px-0">
                 <div class="bg-image"></div>
             </div>
-            <div class="col-7 padded-section">
+            <div class="col-7 padded-section-es">
                 <h2 class="section-title">Lorem Ipsum</h2>
                 <p><%= LoremIpsum.lorem_ipsum(words: 100) %></p>
             </div>
@@ -24,6 +24,12 @@
 
 <%= render 'skills' %>
 
+<%= render 'projects' %>
+
+<%= render 'skills_2' %>
+
+<%= render 'contact' %>
+
 <style>
 
 .p-relative {
@@ -36,7 +42,7 @@
     height: 500px;
     position: absolute;
     top: -125px;
-    z-index: -1;
+    z-index: -2;
 }
 
 .bg-image {
@@ -44,7 +50,7 @@
     background-color: lightgray;
 }
 
-.padded-section {
+.padded-section-es {
     padding: 0 3rem;
 }
 

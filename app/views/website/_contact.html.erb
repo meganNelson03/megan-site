@@ -1,0 +1,55 @@
+<section class="container padding-bottom">
+    <div class="row">
+        <div class="col-5">
+            <h2 class="section-title">Contact Me.</h2>
+            <p><%= LoremIpsum.lorem_ipsum(words: 25) %></p>
+            <ul class="unstyled-list horizontal-list icon-list">
+                <li>
+                    <a href="">
+                    <i class="fa-brands icon icon-dark icon-lg fa-github"></i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="">
+                    <span class="fa-stack icon-dark icon-lg">
+                        <i class="fas fa-circle fa-stack-2x circle"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
+                    </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="fa-stack icon-dark icon-lg">
+                        <i class="fas fa-circle fa-stack-2x circle"></i>
+                        <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
+                    </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-7">
+            <%= render 'form' %>
+        </div>
+    </div>
+</section>
+
+<style>
+
+ul {
+    padding-left: 0px;
+}
+
+.horizontal-list {
+    display: inline-flex;
+}
+
+.horizontal-list > li {
+    margin-right: 1rem;
+}
+
+.icon-dark {
+    color: darkgray;
+}
+
+
+</style>

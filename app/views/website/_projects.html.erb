@@ -1,0 +1,55 @@
+<section class="padding-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div class="bg-image h-80"></div>
+            </div>
+            <div class="col-7 padded-section-es">
+                <h2 class="section-title">Consectetur</h2>
+                <div  class="description content-container">
+                <p><%= LoremIpsum.lorem_ipsum(words: 50) %></p>
+                <%= link_to root_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
+                    Lorem
+                <% end %>
+                <%= link_to root_path, class: 'btn btn-second btn-round btn-xl' do %>
+                    Ipsum
+                <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8 p-relative">
+            <div class="bg-element square"></div>
+        </div>
+        <div class="col-4">  
+        </div>
+    </div>
+</section>
+
+<style>
+
+.bg-image.h-80 {
+    height: 80%;
+}
+
+.description {
+    position: relative;
+    top: 10px;
+}
+
+.content-container {
+    position: relative;
+    padding: 3rem 3rem 3rem 0rem;
+}
+
+.content-container:after {
+    content: '';
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.1);
+    top: 0; right:0; left: -12.5%; bottom: 0;
+    z-index: -1;
+}
+
+</style>

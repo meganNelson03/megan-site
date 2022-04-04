@@ -1,0 +1,42 @@
+<%= form_for :symbol do |f| %>
+    <div class="form-group">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.text_field :email, class: 'form-control', placeholder: 'Email' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.text_area :message, class: 'form-control', placeholder: 'Message' %>
+    </div>
+
+    <%= f.submit "Get in Touch", class: 'btn btn-main btn-xl btn-round' %>
+<% end %>
+
+<style>
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    background: lightgray;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+::placeholder {
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+</style>
