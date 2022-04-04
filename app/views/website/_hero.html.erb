@@ -1,0 +1,132 @@
+<div class="hero">
+    <div class="row h-100">
+        <div class="col-5 left-content d-flex align-items-end px-0">
+            <ul class="unstyled-list vertical-list icon-list">
+                <li>
+                    <a href="">
+                    <i class="fa-brands icon icon-white icon-lg fa-github"></i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="">
+                    <span class="fa-stack icon-white icon-lg">
+                        <i class="fas fa-circle fa-stack-2x circle"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
+                    </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="fa-stack icon-white icon-lg">
+                        <i class="fas fa-circle fa-stack-2x circle"></i>
+                        <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
+                    </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-7 right-content d-flex align-items-center px-0">
+            <div class="hero-text">
+                <h1 class="lead-text">Megan Nelson</h1>
+                <p class="headline">I'm a Full Stack Web Developer.</p>
+                <div class="actions">
+                    <%= link_to root_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
+                        Lorem
+                    <% end %>
+                    <%= link_to root_path, class: 'btn btn-second btn-round btn-xl' do %>
+                        Ipsum
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+.icon-white {
+    color: white;
+}
+
+.icon-lg {
+    width: 60px;
+    height: 60px;
+}
+
+.icon-lg.fa-stack .circle {
+    width: 60px;
+    height: 60px;
+}
+
+.icon-lg.fa-stack .inner-icon {
+    font-size: 1.5rem;
+}
+
+.icon-white.fa-stack .inner-icon {
+    color: darkgray;
+}
+
+.unstyled-list {
+    list-style: none;
+}
+
+.vertical-list.icon-list li {
+    margin-bottom: 1rem;
+}
+
+.btn-xl {
+    padding: .75rem 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.btn-round {
+    border-radius: 50px;
+}
+
+.btn-main {
+    background: darkgray;
+    color: white 
+}
+
+.btn-second {
+    background: lightgray;
+}
+
+.lead-text {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.headline {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.hero-text {
+    padding: 3rem;
+}
+
+.hero .left-content,
+.hero .right-content {
+    height: 100%;
+}
+
+.left-content {
+    background: lightgray;
+}
+
+.right-content {
+    border: 1px solid lightgray;
+}
+
+.hero {
+    height: 100vh;
+}
+
+body {
+    background: white;
+}
+
+</style>
