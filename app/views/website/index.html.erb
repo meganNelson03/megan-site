@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-8"></div>
         <div class="col-4 p-relative">
-            <canvas class="bg-element square" id="myCanvas" resize></canvas>
+            <%#= image_tag 'blob-bg.svg', class: 'bg-element square' %>
         </div>
     </div>
 </section>
@@ -46,6 +46,11 @@
 <%= render 'contact' %>
 
 <style>
+
+.btn-main {
+    background: #287b61;
+    color: white;
+}
 
 .p-relative {
     position: relative;

@@ -1,6 +1,8 @@
 <div class="hero">
     <div class="row h-100">
         <div class="col-5 padded-section left-content d-flex align-items-end">
+            <!-- canvas class="bg-element" id="myCanvas" resize></canvas -->
+            <%= image_tag 'blob-bg.svg', class: 'bg-element' %>
             <ul class="unstyled-list vertical-list icon-list">
                 <li>
                     <a href="">
@@ -25,9 +27,12 @@
                 </li>
             </ul>
         </div>
-        <div class="col-7 padded-section right-content d-flex align-items-center">
+        <div class="col-7 padded-section right-content d-flex align-items-center p-relative">
+            <div class="bg-element-img">
+                <%= image_tag 'rectangles.svg', class: 'w-50' %>
+            </div>
             <div class="hero-text">
-                <h1 class="lead-text">Megan Nelson</h1>
+                <h1 class="lead-text"><span class="highlight">Megan</span> Nelson</h1>
                 <p class="headline">I'm a Full Stack Web Developer.</p>
                 <div class="actions">
                     <%= link_to root_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
@@ -44,6 +49,74 @@
 
 
 <style>
+
+.bg-element-img {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    align-items: end;
+    display: flex;
+    justify-content: end;
+    z-index: -3;
+    opacity: 0.15;
+}
+
+
+.lead-text {
+    position: relative;
+    z-index: 1;
+}
+
+.lead-text:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    left: -5px;
+    width: 45%;
+    bottom: -5px;
+    background-color: #297b62;
+    opacity: 0.1;
+    z-index: -1;
+    min-width: 100px;
+}
+
+.highlight {
+    color: #8cd388;
+}
+
+.hero .bg-element,
+.hero #myCanvas {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+top: 0;
+right: 0%;
+}
+
+.hero #myCanvas {
+    background: #17171a;
+}
+
+.hero .left-content {
+    z-index: -5; 
+    position: relative;
+    background: #17171a;
+}
+
+.hero .right-content {
+    box-shadow: 0px -10px 200px rgb(0 0 0);
+    background: #202021;
+    border: none;
+    color: white;
+    border: none;
+    z-index: 0;
+}
+
+.hero .lead-text, {
+    color: white;
+}
 
 .hero .icon,
 .logo {
@@ -99,18 +172,23 @@
     color: white 
 }
 
+.btn {
+    font-weight: 700;
+}
+
 .btn-second {
-    background: lightgray;
+    background: white;
+    color: #287b61;
 }
 
 .lead-text {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
 }
 
 .headline {
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .padded-section {
