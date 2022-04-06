@@ -1,7 +1,6 @@
 <div class="hero">
     <div class="row h-100">
         <div class="col-5 padded-section left-content d-flex align-items-end">
-            <!-- canvas class="bg-element" id="myCanvas" resize></canvas -->
             <%= image_tag 'blob-bg.svg', class: 'bg-element' %>
             <ul class="unstyled-list vertical-list icon-list">
                 <li>
@@ -78,6 +77,10 @@
     opacity: 0.1;
     z-index: -1;
     min-width: 100px;
+}
+
+.hero {
+    overflow: hidden;
 }
 
 .highlight {
