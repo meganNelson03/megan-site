@@ -12,13 +12,22 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <%= link_to root_path, class: 'nav-link active' do %>About Me<% end %>
+                <div class="link">
+                  <%= link_to root_path, class: 'nav-link active' do %>About Me<% end %>
+                  <span></span>
+                </div>
               </li>
               <li class="nav-item">
-                <%= link_to root_path, class: 'nav-link' do %>Projects<% end %>
+                <div class="link">
+                  <%= link_to root_path, class: 'nav-link' do %>Projects<% end %>
+                  <span></span>
+                </div>
               </li>
               <li class="nav-item">
-                <%= link_to root_path, class: 'nav-link' do %>Art<% end %>
+                <div class="link">
+                  <%= link_to root_path, class: 'nav-link' do %>Art<% end %>
+                  <span></span>
+                </div>
               </li>
             </ul>
           </div>
@@ -27,6 +36,39 @@
 </nav>
 
 <style>
+
+#main-nav .nav-item .link {
+  position: relative;
+  margin-right: 2rem;
+
+}
+
+#main-nav .nav-link + span {
+  width: 0px;
+  left: 100%;
+  border-radius: 1px;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+}
+
+
+#main-nav .nav-link:hover + span {
+  position: absolute;
+  height: 12px;
+  bottom: 0;
+  left: -5px;
+  right: 5px;
+  background-color: #242f2c;
+  opacity: 0.7;
+  z-index: -1;
+  width: 100%;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
 
 #main-nav {
   z-index: 99;
@@ -42,8 +84,9 @@
   font-weight: 100;
   font-size: 1.5rem;
   padding: 0px;
-  margin-right: 2rem;
 }
+
+
 
 .navbar.navbar-abs {
   position: absolute;

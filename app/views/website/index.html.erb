@@ -1,7 +1,7 @@
 <%= render 'hero' %>
 
 <!-- BELOW THE FOLD -->
-<section class="about padding-top padding-bottom">
+<section class="about padding-top padding-bottom container-fluid px-0">
     <div class="">
         <div class="row">
             <div class="col-5 px-0 p-relative">
@@ -22,12 +22,35 @@
     <div class="row">
         <div class="col-8"></div>
         <div class="col-4 p-relative">
-            <div class='bg-element square'></div>
+            <div class='bg-element square'>
+                <%= image_tag 'circuit-board--lg.svg', class: 'h-100 w-100 object-fit-cover' %>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
+
+.btn {
+    transition: all 0.09s ease-in;
+}
+
+.btn-second {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+}
+
+.btn-main:hover {
+    color: white;
+    background-color: #195240;
+}
+
+.light-element {
+    opacity: 0.05;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
 
 .about .bg-element {
 position: absolute;
@@ -77,11 +100,11 @@ right: 0%;
 }
 
 .bg-element.square {
-    background: #f4f4f4;;
+    background: #b8e8b32b;
     width: 100%;
     height: 500px;
     position: absolute;
-    top: -125px;
+    top: 0px;
     z-index: -2;
 }
 

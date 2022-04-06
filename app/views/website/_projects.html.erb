@@ -20,7 +20,9 @@
     </div>
     <div class="row">
         <div class="col-8 p-relative">
-            <div class="bg-element square"></div>
+            <div class="bg-element square">
+                <%= image_tag 'circuit-board--lg.svg', class: 'w-100 h-100 object-fit-cover' %>
+            </div>
         </div>
         <div class="col-4">  
         </div>
@@ -28,6 +30,10 @@
 </section>
 
 <style>
+
+.fa-stack.icon-white .inner-icon {
+    color: #287b61;
+}
 
 .bg-image.h-80 {
     height: 80%;
