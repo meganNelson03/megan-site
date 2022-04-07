@@ -5,12 +5,12 @@
             <p><%= LoremIpsum.lorem_ipsum(words: 25) %></p>
             <ul class="unstyled-list horizontal-list icon-list">
                 <li>
-                    <a href="">
+                    <a href="<%= GITHUB %>" target="_blank">
                     <i class="fa-brands icon icon-dark-1 icon-lg fa-github"></i>
                     </a>
                 </li> 
                 <li>
-                    <a href="">
+                    <a href="<%= LINKED_IN %>" target="_blank">
                     <span class="fa-stack icon-dark-2 icon-lg">
                         <i class="fas fa-circle fa-stack-2x circle"></i>
                         <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
@@ -18,7 +18,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="mailto:<%= EMAIL %>">
                     <span class="fa-stack icon-dark-3 icon-lg">
                         <i class="fas fa-circle fa-stack-2x circle"></i>
                         <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
@@ -34,6 +34,14 @@
 </section>
 
 <style>
+
+.icon-dark-1, .icon-dark-2, .icon-dark-3 {
+    transition: all 0.125s ease-in;
+}
+
+.icon-dark-1:hover, .icon-dark-2:hover, .icon-dark-3:hover {
+    color: #274c73
+}
 
 .icon-dark-1 {
     color: #297b62

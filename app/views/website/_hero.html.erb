@@ -4,20 +4,20 @@
             <%= image_tag 'blob-bg.svg', class: 'bg-element' %>
             <ul class="unstyled-list vertical-list icon-list">
                 <li>
-                    <a href="">
-                    <i class="fa-brands icon icon-white icon-lg fa-github"></i>
+                    <a href="<%= GITHUB %>" target="_blank">
+                        <i class="fa-brands icon icon-white icon-lg fa-github"></i>
                     </a>
                 </li> 
                 <li>
-                    <a href="">
-                    <span class="fa-stack icon-white icon-lg">
-                        <i class="fas fa-circle fa-stack-2x circle"></i>
-                        <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
-                    </span>
+                    <a href="<%= LINKED_IN %>" target="_blank">
+                        <span class="fa-stack icon-white icon-lg">
+                            <i class="fas fa-circle fa-stack-2x circle"></i>
+                            <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="mailto:<%= EMAIL %>" target="_blank">
                     <span class="fa-stack icon-white icon-lg">
                         <i class="fas fa-circle fa-stack-2x circle"></i>
                         <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
@@ -58,6 +58,23 @@
     justify-content: end;
     z-index: -3;
     opacity: 0.15;
+}
+
+.icon-white:hover {
+    color: #8cd388;
+    transition: all 0.125s ease-in;
+}
+
+.inner-icon, .circle {
+    transition: all 0.125s ease-in;
+}
+
+.fa-stack.icon-white:hover .inner-icon {
+    color: white;
+}
+
+.fa-stack.icon-white:hover .circle {
+    color: #8cd388;
 }
 
 
@@ -103,7 +120,7 @@ right: 0%;
 }
 
 .hero .left-content {
-    z-index: -5; 
+    z-index: 0; 
     position: relative;
     background: #17171a;
 }
