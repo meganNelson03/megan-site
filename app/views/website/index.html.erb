@@ -1,85 +1,7 @@
 <%= render 'hero' %>
 
-<!-- BELOW THE FOLD -->
-<section class="about padding-top padding-bottom container-fluid px-0">
-    <div class="">
-        <div class="row">
-            <div class="col-5 px-0 p-relative">
-                <%= image_tag 'circuits-sm.svg', class: 'bg-element bg-green bg-inset-shadow' %>
-                <!--div class="bg-image"></div -->
-            </div>
-            <div class="col-7 padded-section-es">
-                <h2 class="section-title">Adaptability and Expertise</h2>
-                <p>
-                I build device-responsive, custom websites using Ruby on Rails, HTML/CSS/JavaScript, and MySQL, with design support from
-                Adobe Photoshop, Illustrator, and InDesign. From initial concept to design to copywriting to deployment to maintenance, I manage every part of the process in close cooperation with my clients. 
-                Whether the project is a bonafide "software application" for the web or a single-page promotional site, I'm always up for the task.
-                I’m adaptable, quick to learn new technologies, and always looking for a challenge.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-8"></div>
-        <div class="col-4 p-relative">
-            <div class='bg-element square'>
-                <%= image_tag 'circuit-board--lg.svg', class: 'h-100 w-100 object-fit-cover' %>
-            </div>
-        </div>
-    </div>
-</section>
+<%= render 'about' %>
 
-<style>
-
-.btn {
-    transition: all 0.09s ease-in;
-}
-
-.btn-second {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
-}
-
-.btn-main:hover {
-    color: white;
-    background-color: #195240;
-}
-
-.light-element {
-    opacity: 0.05;
-}
-
-.object-fit-cover {
-    object-fit: cover;
-}
-
-.about .bg-element {
-position: absolute;
-width: 100%;
-height: 100%;
-object-fit: cover;
-
-
-top: 0;
-right: 0%;
-}
-
-.bg-inset-shadow {
-    box-shadow: inset -30px 30px 150px rgba(0, 0, 0, .5);
-}
-
-.bg-green {
-    background: #297b62;
-}
-
-#myCanvas {
-    background: lightgray;
-}
-
-</style>
-
-
-
-<%#= render 'skills' %>
 <%= render 'slider_example' %>
 
 <%= render 'projects' %>
@@ -90,10 +12,7 @@ right: 0%;
 
 <style>
 
-.btn-main {
-    background: #287b61;
-    color: white;
-}
+
 
 .p-relative {
     position: relative;
@@ -131,23 +50,5 @@ p {
     padding-bottom: 80px;
 }
 
-.section-title {
-    display: inline-block;
-    font-size: 2.5rem;
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.section-title:after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    left: -5px;
-    width: 45%;
-    bottom: -5px;
-    background-color: #b8e8b3;
-    z-index: -1;
-    min-width: 100px;
-}
 
 </style>

@@ -10,6 +10,59 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
 }
 
+/* Buttons */
+
+.btn {
+  transition: all 0.09s ease-in;
+}
+
+.btn-second {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+}
+
+.btn-main {
+  background: #287b61;
+  color: white;
+
+  &:hover {
+    color: white;
+    background-color: #195240;
+  }
+}
+
+.about {
+  .bg-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    right: 0%;
+  }  
+}
+
+/* Section Title */
+
+
+.section-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 40px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    left: -5px;
+    width: 45%;
+    bottom: -5px;
+    background-color: #b8e8b3;
+    z-index: -1;
+    min-width: 100px;
+  }
+}
+
 /* Skills Slider */
 
 .skills-slider {
@@ -34,3 +87,21 @@ h1, h2, h3, h4, h5, h6 {
     }
   
   }
+
+/* Utility */
+
+.bg-green {
+  background: #297b62;
+}
+
+.bg-inset-shadow {
+  box-shadow: inset -30px 30px 150px rgba(0, 0, 0, .5);
+}
+
+.light-element {
+  opacity: 0.05;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}

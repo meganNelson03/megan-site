@@ -1,3 +1,7 @@
+<%= link_to root_path do %>
+    <%= image_tag 'logo-dark.svg', class: 'logo' %>
+<% end %>
+
 <section class="under-development">
     <div class="row p-relative w-100 h-100">
         <div class="col-5 bg-lightgreen left-content p-relative px-0">
@@ -15,7 +19,7 @@
                     <h1 class="section-title section-title-big">Under Development</h1>
                     <p class="big-text">
                         This page is currently being worked on, please check back in the future. 
-                    </p>
+                    </p> 
                 </div>
             </div>
             <div class="col-3">
@@ -40,6 +44,13 @@
 
 
 <style>
+
+.logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 100px;
+}
 
 .section-title-big {
     font-size: 3rem;

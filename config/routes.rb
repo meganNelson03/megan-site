@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   get '/art', to: 'art#index'
 
+  get '/under_development', to: 'website#under_development'
+
   root "website#index"
 end
