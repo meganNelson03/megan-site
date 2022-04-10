@@ -1,27 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Assistant', sans-serif;
-    font-size: 18px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 18px;
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
 }
 
+p {
+  line-height: 2;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: justify;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #287b61;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+/* Padding */
+
+.padding-top {
+  padding-top: 80px;
+}
+
+.padding-bottom {
+  padding-bottom: 80px;
+}
+
+.padded-section-es {
+  padding: 0 3rem;
+}
+
+.padded-section {
+  padding: 3rem;
+}
+
 /* Buttons */
 
 .btn {
   transition: all 0.09s ease-in;
+  font-weight: 700;
 }
 
-.btn-second {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+.btn-round {
+  border-radius: 50px;
 }
 
 .btn-main {
-  background: #287b61;
+  background: $color-green;
   color: white;
 
   &:hover {
@@ -30,16 +71,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.about {
-  .bg-element {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    right: 0%;
-  }  
+.btn-second {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+  background: white;
+  color: $color-green;
 }
+
+.btn-xl {
+  padding: .75rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
 
 /* Section Title */
 
@@ -88,14 +131,28 @@ h1, h2, h3, h4, h5, h6 {
   
   }
 
+/* Content Containers */
+
+.square {
+  .darkgray {
+    background: darkgray;
+    width: 100%;
+    height: 100px;
+  }
+}
+
 /* Utility */
 
+.p-relative {
+  position: relative;
+}
+
 .bg-green {
-  background: #297b62;
+  background: $color-green;
 }
 
 .bg-inset-shadow {
-  box-shadow: inset -30px 30px 150px rgba(0, 0, 0, .5);
+  box-shadow: inset -30px 30px 150px rgba(0, 0, 0, .1);
 }
 
 .light-element {
@@ -105,3 +162,55 @@ h1, h2, h3, h4, h5, h6 {
 .object-fit-cover {
   object-fit: cover;
 }
+
+.fancy-line {
+  font-size: 1.25rem;
+  color: #359c7d;
+}
+
+/* Footer */
+
+footer {
+    padding-bottom: 2rem;
+    background: white;
+}
+
+.footer-text {
+  color: #8f8f8f;
+  font-weight: 100;
+}
+
+/* Dark Section */
+
+.dark-section {
+  .lead-text {
+    color: white;
+  }
+}
+
+
+/* Light Section */
+
+.light-section {
+  .icon-1, .icon-2, .icon-3 {
+    transition: all 0.125s ease-in;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  .icon-1 {
+    color: #297b62
+  }
+  
+  .icon-2 {
+    color: #369c7d;
+  }
+  
+  .icon-3 {
+    color: #b8e8b3;
+  }
+}
+
+

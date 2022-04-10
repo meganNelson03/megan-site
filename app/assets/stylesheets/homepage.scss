@@ -1,0 +1,60 @@
+.hero {
+    height: 100vh;
+    overflow: hidden;
+
+    .icon,
+    .logo {
+        filter: drop-shadow(0px 0px 20px black);
+    }
+    .left-content,
+    .right-content {
+        height: 100%;
+    }
+    .left-content {
+        position: relative;
+        background: #17171a;
+        z-index: map-get($z-index, hero-content);
+    }
+    .right-content {
+        box-shadow: 0px -10px 200px rgba(0, 0, 0, .1);
+        background: #202021;
+        border: none;
+        color: white;
+        border: none;
+        z-index: map-get($z-index, hero-content);
+    }
+
+    .bg-element,
+    #myCanvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        right: 0%;
+    }
+
+    #myCanvas {
+        background: #17171a;
+    }
+}
+
+
+
+.lead-text {
+    position: relative;
+    z-index: map-get($z-index, lead-text);
+
+    &:after, &::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        left: -5px;
+        width: 45%;
+        bottom: -5px;
+        background-color: $color-green;
+        opacity: 0.1;
+        z-index: -1;
+        min-width: 100px;
+    }
+}

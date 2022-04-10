@@ -1,17 +1,19 @@
-<section class="container padding-bottom">
+<section id="contact" class="container padding-bottom light-section">
     <div class="row">
-        <div class="col-5">
+        <div class="col-5 pe-5">
             <h2 class="section-title">Contact Me.</h2>
-            <p><%= LoremIpsum.lorem_ipsum(words: 25) %></p>
+            <p>
+            Interested? Please reach out to me on LinkedIn, through my email, or via this contact form. I’ll get back to you as soon as possible.
+            </p>
             <ul class="unstyled-list horizontal-list icon-list">
                 <li>
                     <a href="<%= GITHUB %>" target="_blank">
-                    <i class="fa-brands icon icon-dark-1 icon-lg fa-github"></i>
+                    <i class="fa-brands icon icon-1 icon-lg fa-github"></i>
                     </a>
                 </li> 
                 <li>
                     <a href="<%= LINKED_IN %>" target="_blank">
-                    <span class="fa-stack icon-dark-2 icon-lg">
+                    <span class="fa-stack icon-2 icon-lg">
                         <i class="fas fa-circle fa-stack-2x circle"></i>
                         <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
                     </span>
@@ -19,7 +21,7 @@
                 </li>
                 <li>
                     <a href="mailto:<%= EMAIL %>">
-                    <span class="fa-stack icon-dark-3 icon-lg">
+                    <span class="fa-stack icon-3 icon-lg">
                         <i class="fas fa-circle fa-stack-2x circle"></i>
                         <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
                     </span>
@@ -35,25 +37,7 @@
 
 <style>
 
-.icon-dark-1, .icon-dark-2, .icon-dark-3 {
-    transition: all 0.125s ease-in;
-}
 
-.icon-dark-1:hover, .icon-dark-2:hover, .icon-dark-3:hover {
-    color: #274c73
-}
-
-.icon-dark-1 {
-    color: #297b62
-}
-
-.icon-dark-2 {
-    color: #369c7d;
-}
-
-.icon-dark-3 {
-    color: #b8e8b3;
-}
 
 ul {
     padding-left: 0px;
@@ -65,10 +49,6 @@ ul {
 
 .horizontal-list > li {
     margin-right: 1rem;
-}
-
-.icon-dark {
-    color: darkgray;
 }
 
 

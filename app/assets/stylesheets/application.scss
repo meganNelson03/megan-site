@@ -1,0 +1,10 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
+
+
+@import './shared/mixins';
+@import './shared/variables';
+@import 'scaffolds.scss';
+@import 'images.scss';
+@import 'navigation.scss';
+@import 'homepage.scss';

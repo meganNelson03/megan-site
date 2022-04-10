@@ -1,18 +1,26 @@
-<section class="padding-bottom">
+<section class="light-section">
     <div class="container">
         <div class="row">
             <div class="col-5">
-                <div class="bg-image h-80"></div>
+                <div class="bg-image offset-bg bg-lightgreen">
+                    <%= image_tag 'circuit-board--lg.svg', class: 'h-100 w-100 object-fit-cover' %>
+                </div>
             </div>
             <div class="col-7 padded-section-es">
-                <h2 class="section-title">My Work</h2>
+                <h2 class="section-title">My Work Ethos</h2>
                 <div  class="description content-container">
-                <p><%= LoremIpsum.lorem_ipsum(words: 50) %></p>
-                <%= link_to root_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
-                    Lorem
+                <p class="mb-4">
+                    I create websites that are as feature-rich as they are user-friendly. 
+                    I leverage a custom-built content management system and modular design to create
+                    accessible, extensible, and visually striking sites. Whether the client is a charter
+                    school or local business, I believe every organization should have the site that
+                    best suits their individual needs.
+                </p>
+                <%= link_to projects_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
+                    Projects
                 <% end %>
-                <%= link_to root_path, class: 'btn btn-second btn-round btn-xl' do %>
-                    Ipsum
+                <%= link_to art_path, class: 'btn btn-second btn-round btn-xl' do %>
+                    Art
                 <% end %>
                 </div>
             </div>
@@ -20,7 +28,7 @@
     </div>
     <div class="row">
         <div class="col-8 p-relative">
-            <div class="bg-element square">
+            <div class="bg-element square offset-top">
                 <%= image_tag 'circuit-board--lg.svg', class: 'w-100 h-100 object-fit-cover' %>
             </div>
         </div>
@@ -30,6 +38,26 @@
 </section>
 
 <style>
+
+.prev:hover, .next:hover {
+    opacity: 0.8;
+}
+
+.prev, .next {
+    transition: all 0.125s ease-in;
+}
+
+.bg-element.offset-top {
+    top: -2rem;
+}
+
+.bg-lightgreen {
+    background: #b7e5b2;
+}
+
+.offset-bg {
+    max-height: calc(100% - 10rem);
+}
 
 .fa-stack.icon-white .inner-icon {
     color: #287b61;

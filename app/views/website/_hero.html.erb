@@ -1,4 +1,4 @@
-<div class="hero container-fluid px-0">
+<section class="hero container-fluid px-0 dark-section">
     <div class="row h-100">
         <div class="col-5 padded-section left-content d-flex align-items-end">
             <%= image_tag 'blob-bg.svg', class: 'bg-element' %>
@@ -34,31 +34,20 @@
                 <h1 class="lead-text"><span class="highlight">Megan</span> Nelson</h1>
                 <p class="headline">I'm a Full Stack Web Developer.</p>
                 <div class="actions">
-                    <%= link_to root_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
+                    <%= link_to projects_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
                         Projects
                     <% end %>
-                    <%= link_to root_path, class: 'btn btn-second btn-round btn-xl' do %>
+                    <%= link_to root_path(anchor: 'contact'), class: 'btn btn-second btn-round btn-xl' do %>
                         Contact Me
                     <% end %>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+</section>
 
 <style>
 
-.bg-element-img {
-    position: absolute;
-    right: 0;
-    bottom: 3rem;
-    align-items: end;
-    display: flex;
-    justify-content: end;
-    z-index: -3;
-    opacity: 0.15;
-}
 
 .icon-white:hover {
     color: #8cd388;
@@ -78,70 +67,13 @@
 }
 
 
-.lead-text {
-    position: relative;
-    z-index: 1;
-}
-
-.lead-text:after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    left: -5px;
-    width: 45%;
-    bottom: -5px;
-    background-color: #297b62;
-    opacity: 0.1;
-    z-index: -1;
-    min-width: 100px;
-}
-
-.hero {
-    overflow: hidden;
-}
 
 .highlight {
     color: #8cd388;
 }
 
-.hero .bg-element,
-.hero #myCanvas {
-position: absolute;
-width: 100%;
-height: 100%;
-object-fit: cover;
 
-top: 0;
-right: 0%;
-}
 
-.hero #myCanvas {
-    background: #17171a;
-}
-
-.hero .left-content {
-    z-index: 0; 
-    position: relative;
-    background: #17171a;
-}
-
-.hero .right-content {
-    box-shadow: 0px -10px 200px rgb(0 0 0);
-    background: #202021;
-    border: none;
-    color: white;
-    border: none;
-    z-index: 0;
-}
-
-.hero .lead-text, {
-    color: white;
-}
-
-.hero .icon,
-.logo {
-    filter: drop-shadow(0px 0px 20px black);
-}
 
 .padded-section {
     padding: 3rem;
@@ -177,30 +109,6 @@ right: 0%;
     margin-bottom: 1rem;
 }
 
-.btn-xl {
-    padding: .75rem 2rem;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.btn-round {
-    border-radius: 50px;
-}
-
-.btn-main {
-    background: darkgray;
-    color: white 
-}
-
-.btn {
-    font-weight: 700;
-}
-
-.btn-second {
-    background: white;
-    color: #287b61;
-}
-
 .lead-text {
     font-size: 4rem;
     font-weight: 600;
@@ -211,29 +119,6 @@ right: 0%;
     font-size: 2rem;
 }
 
-.padded-section {
-    padding: 3rem;
-}
 
-.hero .left-content,
-.hero .right-content {
-    height: 100%;
-}
-
-.left-content {
-    background: lightgray;
-}
-
-.right-content {
-    border: 1px solid lightgray;
-}
-
-.hero {
-    height: 100vh;
-}
-
-body {
-    background: white;
-}
 
 </style>

@@ -1,8 +1,11 @@
 $color-green:       #287b61;
 $color-lightgreen:  #b8e8b3;
+$color-blue:        #274c73;
 
 /* Z Indices */
 
 $z-index: (
-  navigation: 99,
+  navigation:     99,
+  hero-content:   0,
+  lead-text:      1,
 );
