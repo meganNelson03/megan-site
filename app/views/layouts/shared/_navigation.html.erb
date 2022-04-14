@@ -1,38 +1,35 @@
-<nav id="main-nav" class="navbar navbar-expand-lg navbar-transparent navbar-abs">
-  <div class="container-fluid px-0">
-    <div class="col-5 padded-section">
+<nav id="secondary-nav" class="navbar navbar-expand-lg navbar-transparent navbar-abs pt-4">
+  <div class="container px-0">
       <%= link_to root_path do %>
-        <%= image_tag 'logo-dark.svg', class: 'logo', width: '100px' %>
+        <%= image_tag 'logo-dark.svg', class: 'logo', width: '50px' %>
       <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-    <div class="col-7 padded-section">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <div class="link">
-                  <%= link_to root_path, class: 'nav-link active' do %>About Me<% end %>
-                  <span></span>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="link">
-                  <%= link_to root_path, class: 'nav-link' do %>Projects<% end %>
-                  <span></span>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="link">
-                  <%= link_to art_path, class: 'nav-link' do %>Art<% end %>
-                  <span></span>
-                </div>
-              </li>
-            </ul>
-          </div>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="link">
+                <%= link_to root_path, class: 'nav-link active' do %>About Me<% end %>
+                <span></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="link">
+                <%= link_to root_path, class: 'nav-link' do %>Projects<% end %>
+                <span></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="link">
+                <%= link_to art_path, class: 'nav-link' do %>Art<% end %>
+                <span></span>
+              </div>
+            </li>
+          </ul>
         </div>
-    </div>
+      </div>
 </nav>
 
 

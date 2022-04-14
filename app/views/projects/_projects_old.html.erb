@@ -1,0 +1,198 @@
+<% if defined?(projects) && projects.count > 0 %>
+    <div class="row mb-4">
+        <% projects.each do |p| %>
+            <div class="col-4 project-container">
+                <div id="project-<%= p.id %>" class="square project-detail pe-3">
+                    <div class="project-details">
+                        <div class="project-image-container">
+                            <div class="project-header">
+                                <div class="project-name no-text-overflow"><%= p.name.titleize %></div>
+                                <div class="description"><%= LoremIpsum.lorem_ipsum(words: 15) %>...</div>
+                            </div>    
+                        <div class="actions">
+                            <span class="btn btn-sm btn-shadow btn-tag btn-round"><i class="fas icon fa-external-link me-2"></i>Link</span>
+                        </div>
+                        <%= image_tag 'projects/jj-homepage.png', class: 'w-100 h-100 project-img' %>
+                        <span class="project-overlay"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+<% end %>
+
+
+
+<style>
+
+
+
+#  {
+#     background-color: #274c73;
+# background-color: #d2e0f1;
+# }
+
+.project-container:nth-of-type(1n) .btn-tag,
+.project-container:nth-of-type(1n) .project-image-container:after,
+.project-container:nth-of-type(1n) .project-name:after
+ {
+         background-color: #274c73;
+
+}
+
+
+.project-container:nth-of-type(2n) .btn-tag,
+.project-container:nth-of-type(2n) .project-image-container:after,
+.project-container:nth-of-type(2n) .project-name:after  {
+    background-color: #369c7d;
+}
+
+# .project-container:nth-of-type(2n) .btn-tag
+# {
+#     background-color: #b5e0d2;
+# }
+
+
+
+.project-container:nth-of-type(3n) .project-image-container:after,
+.project-container:nth-of-type(3n) .project-name:after,
+.project-container:nth-of-type(3n) .btn-tag {
+    background-color: #b7e5b2;
+}
+
+.btn-shadow {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
+}
+
+.actions {
+    z-index: 2;
+}
+
+.description {
+    color: white;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.project-image-container {
+    position: relative;
+    width: calc(100% - 1rem);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+}
+
+
+.project-image-container:after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: url(<%= asset_path 'circuit-board--lg.svg' %>);
+    bottom: -1rem;
+    right: -1rem;
+    background-color: #b8e8b3;
+    z-index: -2;
+    opacity: 0.5;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-fit: cover;
+    background-repeat: no-repeat;
+    background: #202021;
+    opacity: 0.8;
+    
+}
+
+.project-name {
+    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.project-image-container {
+    position: relative;
+}
+
+.actions {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.project-detail {
+    margin-bottom: 4.5rem;
+}
+
+.project-5 {
+    height: 200px;
+}
+
+.btn-tag {
+    background: #f2f2f2;
+    color: white;
+}
+
+.btn-sm {
+    font-size: .9rem;
+    padding: 5px 20px;
+}
+
+.project-6 {
+    height: 150px;
+}
+
+.project-header {
+    position: absolute;
+    top: 1rem;
+    left: 1.25rem;
+    padding-right: 1rem;
+}
+
+
+.project-name {
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.project-name:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    left: -5px;
+    width: 45%;
+    bottom: -5px;
+    background-color: #b8e8b3;
+    z-index: -1;
+    min-width: 0px;
+}
+
+.square {
+    animation: slide-up 0.4s ease;
+    transition: all 2s ease-in;
+} 
+
+.square.darkgray.show {
+    
+    background: green;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>

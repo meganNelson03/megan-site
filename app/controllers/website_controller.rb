@@ -6,6 +6,9 @@ class WebsiteController < ApplicationController
         render :layout => 'homepage'
     end
 
+    def about
+    end
+
     def under_development 
     end
     

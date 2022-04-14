@@ -1,0 +1,49 @@
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+        <tr>
+            <td><%= project.try(:name) %></td>
+            <td>
+                <% if project.categories.count > 0 %>
+                    <% project.categories.each do |c| %>
+                        <span class="me-2"><%= Category.find(c).name || "N/A" %></span>
+                    <% end %>
+				<% end %>
+            </td>
+            <td class="action-td">
+                  <%= button_to admin_project_path(project), :method => :delete, class: 'btn btn-action btn-delete', data: { confirm: 'Are you sure?' } do %>
+                      <i class="fas fa-trash-alt"></i>
+                  <% end %>
+                  <%= link_to edit_admin_project_path(project) do %>
+                    <i class="fas fa-pencil"></i>
+                  <% end %>
+                  <%= link_to admin_project_path(project), class: 'btn btn-action btn-view'  do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+            </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<style>
+
+.action-td {
+    text-align: end;
+}
+
+form.button_to {
+    display: inline-flex;
+}
+
+table {
+    width: 100%;
+}
+
+</style>

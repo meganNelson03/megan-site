@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-6">
+    <%= render 'admin/shared/header', title: 'Projects' %>
+    </div>
+    <div class="col-6 text-end">
+        <%= link_to new_admin_project_path, class: 'btn btn-round btn-lg btn-main' do %>Add Project<% end %>
+    </div>
+</div>
+
+<%= render 'table' %>

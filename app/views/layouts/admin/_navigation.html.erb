@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+  <a class="navbar-brand" href="#">
+    <%= image_tag 'logo-dark.svg', style: 'width: 50px;' %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+      <%= link_to admin_categories_path, class: "dropdown-item" do %>Categories<% end %>
+      </li>
+      <li class="nav-item dropdown">
+          <%= link_to admin_projects_path, class: "dropdown-item" do %>Projects<% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

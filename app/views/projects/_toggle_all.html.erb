@@ -1,0 +1,38 @@
+<%= form_tag projects_path, :id => "filter-form", remote: true do |f| %>
+    <% if params[:categories].present? %>
+        <%= select_tag "previous_categories[]", options_for_select(params[:categories].compact_blank, params[:categories].compact_blank), {multiple: true, class: 'd-none'} %>
+    <% end %>
+    <div class="filters">
+        <ul class="unstyled-list horizontal-list">
+            <li>
+                <%= check_box_tag "toggle_all", "all", true %>
+                <label for="toggle_all" class='btn filter-btn'>
+                    All
+                </label>
+            </li>
+            <% @categories.all.each do |c| %>
+                <li>
+                    <%= check_box_tag "categories[]", c.id, false, {id: "categories_#{c.id}"} %>
+                    <label for="categories_<%= c.id %>" class='btn filter-btn'>
+                        <%= c.name %>
+                    </label>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+</script>
+
+<style>
+
+.filters input[type="checkbox"] {
+    display: none;
+}
+
+.filters input[type="checkbox"]:checked + label {
+    background: #287b61;
+    color: white;
+}
+
+</style>

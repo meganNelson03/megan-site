@@ -20,11 +20,19 @@
                     </a>
                 </li>
                 <li>
+                    <%= link_to asset_path("Resume.pdf", skip_pipeline: true) do %>
+                        <span class="fa-stack icon-3 icon-lg">
+                            <i class="fas fa-circle fa-stack-2x circle"></i>
+                            <i class="fas fa-file-alt fa-stack-1x inner-icon fa-inverse"></i>
+                        </span>
+                    <% end %>
+                </li>
+                <li>
                     <a href="mailto:<%= EMAIL %>">
-                    <span class="fa-stack icon-3 icon-lg">
-                        <i class="fas fa-circle fa-stack-2x circle"></i>
-                        <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
-                    </span>
+                        <span class="fa-stack icon-4 icon-lg">
+                            <i class="fas fa-circle fa-stack-2x circle"></i>
+                            <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
+                        </span>
                     </a>
                 </li>
             </ul>
@@ -36,6 +44,14 @@
 </section>
 
 <style>
+
+.light-section .icon-3 {
+    color: #9fdac8;
+}
+
+.light-section .icon-4 {
+    color: #b8e8b3;
+}
 
 
 

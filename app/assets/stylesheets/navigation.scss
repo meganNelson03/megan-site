@@ -52,7 +52,58 @@
         color: white;
       } 
 }
+
+#secondary-nav {
+    z-index: map-get($z-index, navigation);
+
+    .nav-item a {
+        color: #202021;
+        font-weight: 600;
+    }
+
+    .nav-item {
+        .link {
+            position: relative;
+            margin-left: 2rem;
+        }
+    }
+    .nav-link {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-size: 1.5rem;
+        padding: 0px;
+    }
+    .nav-link + span {
+        width: 0px;
+        left: 100%;
+        border-radius: 1px;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: -webkit-transform 0.2s ease-in;
+        transition: transform 0.2s ease-in;
+    }
+    .nav-link:hover + span {
+        position: absolute;
+        height: 12px;
+        bottom: 0;
+        left: -5px;
+        right: 5px;
+        background-color: #b8e8b3;
+        opacity: 0.7;
+        z-index: -1;
+        width: 100%;
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+}
   
-  
+.under_development {
+    .navbar {
+        display: none !important;
+    }
+}
   
   

@@ -48,8 +48,6 @@
 </section>
 
 
-
-
 <style>
 
 .square-dark {
@@ -71,16 +69,16 @@
     display: block;
     z-index: 3;
     top: 0px;
-    width: 40px;
-    height: 40px;
     border-radius: 50%;
     
 }
 
 .prev, .next {
     background-color: #274c73;
-    opacity: 0.5;
+    opacity: 0.125;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
 
 .prev span {
@@ -93,15 +91,14 @@
     z-index: 3;
     top: 0px;
     right: -50px;
-    width: 40px;
-    height: 40px;
+  
     border-radius: 50%;
     margin-left: -25px;
 
 }
 
 .prev {
-    left: calc(-20px - 50px);
+    left: calc(-40px - 50px);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -109,7 +106,7 @@
 .next {
     top: 50%;
     transform: translateY(-50%);
-    right: calc(-20px - 50px);
+    right: calc(-40px - 50px);
 }
 
 
@@ -120,7 +117,9 @@ padding: 8px;
 border: solid transparent;
 border-width: 0 0 2rem 2rem;
 transform: rotate(45deg);
-margin: -4px 0 0 -24px;
+
+    margin-top: 0px;
+    margin-left: -18px;
 }
 
 .next span:before, .prev span:before {
@@ -137,8 +136,8 @@ padding: 8px;
 
 border: solid transparent;
 border-width: 2rem 2rem 0rem 0rem;
-margin-left: -29px;
-margin-top: -4px;
+margin-left: -25px;
+margin-top: 0px;
 transform: rotate(225deg);
 }
 

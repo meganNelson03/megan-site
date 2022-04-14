@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Megan Nelson</title>
+    <%= render 'application/favicon' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+  </head>
+
+  <body class="<%= action_name %> <%= controller_name %>">
+    <%= render 'layouts/admin/navigation' %>
+    <div class="container padding-top">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+
+<script>
+
+$(document).ready(function() {
+    console.log("heehaa")
+})
+
+</script>

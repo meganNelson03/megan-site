@@ -1,0 +1,9 @@
+<%= form_for [:admin, @project] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :categories %>
+    <%= collection_select(:project, :category_ids, @categories, :id, :name, {}, { multiple: true, class: "form-control form-control-lg", id: 'tag-select' }) %>
+
+    <%= f.submit %>
+<% end %>
