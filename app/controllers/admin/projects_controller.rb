@@ -3,7 +3,7 @@ class Admin::ProjectsController < AdminController
     before_action :set_categories, only: %i[ new edit ]
 
     def index
-        @projects = Project.all
+        @projects = Project.all.order(order: :asc)
     end
 
     def show
@@ -25,6 +25,8 @@ class Admin::ProjectsController < AdminController
     end
 
     def update
+        set_order(params[:project][:order])
+
         if @project.update(project_params)
             redirect_to admin_projects_path
         else
@@ -37,7 +39,16 @@ class Admin::ProjectsController < AdminController
         redirect_to admin_projects_path
     end
 
+
     private
+
+        def set_order(order)
+            Project.where(order: order..).each do |p|
+                p.order = p.order + 1
+                p.save!
+            end 
+        end
+
         def set_project
             @project = Project.find(params[:id])
         end
@@ -47,7 +58,7 @@ class Admin::ProjectsController < AdminController
         end
 
         def project_params
-            params.require(:project).permit(:name, :category_ids => [])
+            params.require(:project).permit(:name, :order, :url, :description, :image_file, :active, :category_ids => [])
         end
 
 end

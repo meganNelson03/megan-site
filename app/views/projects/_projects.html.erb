@@ -1,335 +1,49 @@
 <% if defined?(projects) && projects.count > 0 %>
-    
-    <div class="mb-4 projects-slider">
+    <div class="projects-slider">
         <% projects.each_with_index do |p, i| %>
             <div class="project-slide slide project-container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
+                    <div class="project-name d-lg-none no-text-overflow"><%= p[:name].titleize %></div>
                         <div id="project-<%= p.id %>" class="square project-detail mb-3 pe-3">
-                            <div class="project-details">
-                                <div class="project-image-container">
-                                <div class="actions">
-                                    <span class="btn btn-sm btn-shadow btn-tag btn-round"><i class="fas icon fa-external-link me-3"></i>Website</span>
-                                </div>
-                                <%= image_tag 'projects/jj-homepage.png', class: 'w-100 h-100 project-img' %>
+                            <div class="project-details pt-3" style="z-index: 99;">
+                                <%= link_to project_path(p), remote: true do %>
+                                    <div class="project-image-container" style="z-index: 1 !important;">
+                                    <div class="actions">
+                                        <% if p.url.present? %>
+                                            <%= link_to p.url,  target: '_blank', class: 'btn btn-md btn-shadow btn-tag btn-round' do %>
+                                                <i class="fas icon fa-external-link me-3"></i>Website
+                                            <% end %>
+                                        <% end %>
+                                    </div>
+                                <% end %>
+                                <img src="<%= get_project_image(p) %>" class='w-100 h-100 project-img' />
+                                <%#= image_tag 'get_project_image(p)', class: 'w-100 h-100 project-img' %>
                                 <span class="project-overlay"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-lg-8">
                         <div class="project-content">
-                        <div class="project-name no-text-overflow"><%= p[:name].titleize %></div>
-                        <div class="description"><%= LoremIpsum.lorem_ipsum(words: 50) %>...Read More</div>
-                        </div>    
+                        <div class="project-name d-none d-lg-inline-block no-text-overflow"><%= p[:name].titleize %></div>
+                        <div class="description" style="z-index: 0 !important;">
+                        <% if p.description.present? %>
+                                <%= p.description %>
+                        <% else %>
+                        <%= LoremIpsum.lorem_ipsum(words: 50) %>                 
+                        <% end %>
+                        
+                        </div>
+                    </div>    
                     </div>
                 </div>
             </div>
         <% end %>
     </div>
-    
+<% else %>
+    <div class="card-content no-content d-flex align-items-center justify-content-center project-container">
+        Nothing matches the current filter.
+    </div>
 <% end %>
 
-
-<style>
-
-.project-content {
-    position: relative;
-    padding: 0rem 0rem 2rem 2rem;   
-    animation: slide-up 0.4s ease;
-    transition: all 2s ease-in;
-}
-
-#  {
-#     background-color: #274c73;
-# background-color: #d2e0f1;
-# }
-
- .project-image-container:after,
- .project-name:after
- {
-background-color: #b8e8b3;
-}
-
-.btn-tag {
-    background: #297b62 !important;
-}
-
-.btn-tag .icon {
-    font-weight: 100;
-}
-
-.btn-shadow {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
-}
-
-.actions {
-    z-index: 2;
-}
-
-.description {
-    color: #202021;
-    font-weight: 100;
-    z-index: 2;
-    position: relative;
-    line-height: 2;
-    z-index: 0;
-    padding: 3rem 4rem 4rem 0;
-}
-
-.description:after {
-    content: '';
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
-    position: absolute;
-    top: 0; bottom: 0;
-    z-index: -1;
-    left: -9rem; right: 0rem;
-    background: white;
-}
-
-.project-image-container {
-    position: relative;
-    width: calc(100% - 1rem);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
-    z-index: 4;
-}
-
-
-.project-image-container:after {
-    content: '';
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: url(<%= asset_path 'circuit-board--lg.svg' %>);
-    bottom: -1rem;
-    right: -1rem;
-    background-color: #b8e8b3;
-    z-index: -1;
-    opacity: 1;
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-fit: cover;
-    background-repeat: no-repeat;
-    background: #202021;
-    opacity: 0.0;
-    
-}
-
-
-.project-image-container {
-    position: relative;
-    z-index: 2;
-}
-
-.actions {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-
-.project-5 {
-    height: 200px;
-}
-
-.btn-tag {
-    background: #f2f2f2;
-    color: white;
-    font-size: 1.2rem !important;
-}
-
-.btn-sm {
-    font-size: .9rem;
-    padding: 5px 20px;
-}
-
-.project-6 {
-    height: 150px;
-}
-
-.project-header {
-    top: 1rem;
-    left: 1.25rem;
-    padding-right: 1rem;
-}
-
-
-.project-name {
-    color: #202021;
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    font-weight: 700;
-    font-size: 2.25rem;
-    margin-bottom: 1.25rem;
-    margin-top: 1.25rem;s
-}
-
-.project-name:after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    left: -5px;
-    width: 45%;
-    bottom: -5px;
-    background-color: #b8e8b3;
-    z-index: -1;
-    min-width: 0px;
-}
-
-.square {
-    animation: slide-up 0.4s ease;
-    transition: all 2s ease-in;
-} 
-
-.square.darkgray.show {
-    
-    background: green;
-}
-
-@keyframes slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-</style>
-
-
-<style>
-
-.projects-slider {
-    display: block;
-    position: relative;
-}
-
-.prev span, .next span {
-
-}
-
-.prev {
-    position: absolute;
-    display: block;
-    z-index: 3;
-    top: 0px;
-    border-radius: 50%;
-    
-}
-
-.prev, .next {
-    background-color: #d5ecd3;
-    opacity: 0.9;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    transition: all 0.25s ease-in;
-}
-
-.prev:hover, .next:hover {
-    background-color: #297b62
-}
-
-.prev span {
-    
-}
-
-.next {
-    position: absolute;
-    display: block;
-    z-index: 3;
-    top: 0px;
-    right: -50px;
-  
-    border-radius: 50%;
-    margin-left: -25px;
-
-}
-
-.prev {
-    left: calc(-40px - 80px);
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.next {
-    top: 50%;
-    transform: translateY(-50%);
-    right: calc(-40px - 80px);
-}
-
-
-.prev span:before {
-position: absolute;
-content: "";
-padding: 8px;
-border: solid transparent;
-border-width: 0 0 2rem 2rem;
-transform: rotate(45deg);
-
-    margin-top: 0px;
-    margin-left: -18px;
-}
-
-.next span:before, .prev span:before {
-    box-shadow: 1px -1px 0 1px white inset;
-    -webkit-box-shadow: 2px -2px white inset;
-    -moz-box-shadow: 2px -2px white inset;
-}
-
-
-.next span:before {
-position: absolute;
-content: "";
-padding: 8px;
-
-border: solid transparent;
-border-width: 2rem 2rem 0rem 0rem;
-margin-left: -25px;
-margin-top: 0px;
-transform: rotate(225deg);
-}
-
-
-
-.slick-slide {
-    display: inline-block;
-}
-
-.slick-track {
-  display: flex !important;
-}
-
-.slider-wrapper {
-    //overflow: hidden;
-}
-
-.slick-list {
-    overflow: hidden;
-}
-
-.slick-slide {
-      margin-left: 40px;
-      margin-right: 40px;
-}
-.slick-slide > div {
-    height: 100%;
-}
-.slick-list {
-      margin-left: -40px; /* px size of slide space */
-      width: calc(100% + 80px); /* add double the px size of slide space */
-}
-.slide > div {
-        height: calc(100% - 10px);
-}
-
-</style>

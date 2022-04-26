@@ -1,8 +1,8 @@
 <section class="hero container-fluid px-0 dark-section">
     <div class="row h-100">
-        <div class="col-5 padded-section left-content d-flex align-items-end">
+        <div class="col-2 col-sm-4 col-md-5 padded-section left-content d-flex align-items-end">
             <%= image_tag 'blob-bg.svg', class: 'bg-element' %>
-            <ul class="unstyled-list vertical-list icon-list">
+            <ul class="d-none d-sm-block unstyled-list vertical-list icon-list">
                 <li>
                     <a href="<%= GITHUB %>" target="_blank">
                         <i class="fa-brands icon icon-white icon-lg fa-github"></i>
@@ -26,99 +26,45 @@
                 </li>
             </ul>
         </div>
-        <div class="col-7 padded-section right-content d-flex align-items-center p-relative">
+        <div class="col-10 col-sm-8 col-md-7 padded-section right-content d-flex align-items-center p-relative">
             <div class="bg-element-img">
                 <%= image_tag 'rectangles.svg', class: 'w-50' %>
             </div>
             <div class="hero-text">
                 <h1 class="lead-text"><span class="highlight">Megan</span> Nelson</h1>
                 <p class="headline">I'm a Full Stack Developer.</p>
-                <div class="actions">
-                    <%= link_to projects_path, class: 'btn btn-main btn-round btn-xl me-4' do %>
+                <div class="actions mt-4">
+                    <%= link_to projects_path, class: 'btn btn-main btn-round btn-xl me-2 me-md-4 mb-3' do %>
                         Projects
                     <% end %>
-                    <%= link_to root_path(anchor: 'contact'), class: 'btn btn-second btn-round btn-xl' do %>
+                    <%= link_to root_path(anchor: 'contact'), class: 'btn btn-second btn-round btn-xl mb-3' do %>
                         Contact Me
                     <% end %>
                 </div>
+                <ul class="d-sm-none unstyled-list horizontal-list icon-list mt-3">
+                    <li>
+                        <a href="<%= GITHUB %>" target="_blank">
+                            <i class="fa-brands icon icon-white icon-sm fa-github"></i>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="<%= LINKED_IN %>" target="_blank">
+                            <span class="fa-stack icon-white icon-sm">
+                                <i class="fas fa-circle fa-stack-2x circle"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x inner-icon fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:<%= EMAIL %>" target="_blank">
+                        <span class="fa-stack icon-white icon-sm">
+                            <i class="fas fa-circle fa-stack-2x circle"></i>
+                            <i class="fas fa-envelope fa-stack-1x inner-icon fa-inverse"></i>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
-
-<style>
-
-
-.icon-white:hover {
-    color: #8cd388;
-    transition: all 0.125s ease-in;
-}
-
-.inner-icon, .circle {
-    transition: all 0.125s ease-in;
-}
-
-.fa-stack.icon-white:hover .inner-icon {
-    color: white;
-}
-
-.fa-stack.icon-white:hover .circle {
-    color: #8cd388;
-}
-
-
-
-.highlight {
-    color: #8cd388;
-}
-
-
-
-
-.padded-section {
-    padding: 3rem;
-}
-
-.icon-white {
-    color: white;
-}
-
-.icon-lg {
-    width: 60px;
-    height: 60px;
-}
-
-.icon-lg.fa-stack .circle {
-    width: 60px;
-    height: 60px;
-}
-
-.icon-lg.fa-stack .inner-icon {
-    font-size: 1.5rem;
-}
-
-.icon-white.fa-stack .inner-icon {
-    color: darkgray;
-}
-
-.unstyled-list {
-    list-style: none;
-}
-
-.vertical-list.icon-list li {
-    margin-bottom: 1rem;
-}
-
-.lead-text {
-    font-size: 4rem;
-    font-weight: 600;
-}
-
-.headline {
-    font-weight: 200;
-    font-size: 2rem;
-}
-
-
-
-</style>

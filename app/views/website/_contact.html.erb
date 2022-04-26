@@ -1,11 +1,11 @@
-<section id="contact" class="container padding-bottom light-section">
+<section id="contact" class="container padding-bottom light-section padded-section-es-sm padded-section-es-md-auto">
     <div class="row">
-        <div class="col-5 pe-5">
+        <div class="col-12 col-md-5 pe-md-5">
             <h2 class="section-title">Contact Me.</h2>
             <p>
             Interested? Please reach out to me on LinkedIn, through my email, or via this contact form. I’ll get back to you as soon as possible.
             </p>
-            <ul class="unstyled-list horizontal-list icon-list">
+            <ul class="unstyled-list horizontal-list icon-list pt-4">
                 <li>
                     <a href="<%= GITHUB %>" target="_blank">
                     <i class="fa-brands icon icon-1 icon-lg fa-github"></i>
@@ -37,35 +37,8 @@
                 </li>
             </ul>
         </div>
-        <div class="col-7">
+        <div class="col-12 col-md-7 mt-3 me-md-0">
             <%= render 'form' %>
         </div>
     </div>
 </section>
-
-<style>
-
-.light-section .icon-3 {
-    color: #9fdac8;
-}
-
-.light-section .icon-4 {
-    color: #b8e8b3;
-}
-
-
-
-ul {
-    padding-left: 0px;
-}
-
-.horizontal-list {
-    display: inline-flex;
-}
-
-.horizontal-list > li {
-    margin-right: 1rem;
-}
-
-
-</style>

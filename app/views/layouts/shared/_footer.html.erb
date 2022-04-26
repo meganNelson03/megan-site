@@ -1,0 +1,21 @@
+<footer class="mb-0 py-3">
+    <div class="footer-bg"></div>
+    <div class="container px-0">
+        <div class="row px-0">
+            <div class="col-12 col-sm-1 mx-auto order-2 order-sm-1 mt-3 mt-sm-0">
+                <%= image_tag 'logo-dark.svg', class: 'w-100', style: 'height: 50px;' %>
+            </div>
+            <div class="col-12 col-sm-11 d-flex flex-row justify-content-sm-end justify-content-center align-items-center order-1 order-sm-2">
+              <span class="footer-text">
+                Icons by <a href="https://icons8.com/" class="ms-1" target="_blank">Icons8</a><span class="fancy-line mx-2">|</span> SVG Background by <a target="_blank" class="ms-1" href="https://bgjar.com"> BGJar</a> <span class="fancy-line mx-2">|</span> Animation by me
+              </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer-bg {
+    background: url(<%= asset_path 'circuit-board--lg.svg' %>);
+}
+</style>

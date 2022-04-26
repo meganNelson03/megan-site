@@ -6,16 +6,22 @@ class ProjectsController < ApplicationController
         if params[:categories].present?
             @projects = Project.where(
                             id: Project.joins(:categories).where(categories: {id: params[:categories]})
-                            )
+                            ).where(active: true)
         else
-            @projects = Project.all
+            @projects = Project.where(active: true)
         end
 
-        @projects = @projects.order(created_at: :desc)
+        @projects = @projects.order(order: :asc)
 
         respond_to do |format|
             format.html 
             format.js { render 'filter' }
+        end
+    end
+
+    def show
+        respond_to do |format|
+            format.js { render 'show' }
         end
     end
 

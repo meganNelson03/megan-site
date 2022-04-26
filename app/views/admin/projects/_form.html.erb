@@ -2,8 +2,29 @@
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
 
+    <%= f.label :image_file %>
+    <%= f.file_field :image_file, value: @project.image_file ||= "", accept: 'image/x-png,image/gif,image/jpeg' %>
+    <div>
+    <% if @project.image_file.present? %>
+        Current: <%= @project.image_file %>
+    <% end %>
+    </div>
+
+    <%= f.label :url %>
+    <%= f.text_field :url, class: 'form-control' %>
+
     <%= f.label :categories %>
     <%= collection_select(:project, :category_ids, @categories, :id, :name, {}, { multiple: true, class: "form-control form-control-lg", id: 'tag-select' }) %>
+
+    <%= f.label :order %>
+    <%= f.number_field :order, class: 'form-control' %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: '10', class: 'form-control' %>
+
+
+    <%= f.label :active %>
+    <%= f.check_box :active %>
 
     <%= f.submit %>
 <% end %>

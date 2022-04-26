@@ -9,21 +9,13 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-
   </head>
 
   <body class="<%= action_name %> <%= controller_name %>">
     <%= render 'layouts/admin/navigation' %>
+    <%= render 'layouts/shared/messages' %>
     <div class="container padding-top">
       <%= yield %>
     </div>
   </body>
 </html>
-
-<script>
-
-$(document).ready(function() {
-    console.log("heehaa")
-})
-
-</script>

@@ -1,6 +1,4 @@
-<%#= render 'layouts/shared/page_header' %>
-
-<section class="projects-title p-relative pb-3">
+<section class="projects-title page-header-section p-relative pb-3">
     <div class="bg-image bg-lightgreen bg-element square h-100">
         <%= image_tag 'circuit-board--lg.svg', class: 'h-100 w-100 object-fit-cover' %>
     </div>
@@ -8,10 +6,10 @@
         <div class="col-12">
             <h1 class="section-title title-lg mb-4">Projects.</h1>
             <div  class="content-container">
-            <p class="big-text">
-                I design, develop, and maintain a variety of websites for charter schools and businesses. 
-                My portfolio showcases projects built with robust functionality, custom content management, and device-responsive design.
-            </p>
+                <p class="big-text">
+                    I design, develop, and maintain a variety of websites for charter schools and businesses. 
+                    My portfolio showcases projects built with robust functionality, custom content management, and device-responsive design.
+                </p>
             </div>
         </div>
     </div>
@@ -27,82 +25,8 @@
 
 <style>
 
-.padding-top-double {
-    padding-top: 105px;
+.project-image-container:after {
+    background-image: url(<%= asset_path 'circuit-board--lg.svg' %>);
 }
-
-.big-text {
-    font-size: 1.25rem;
-}
-
-.square.darkgray {
-    width: 100%;
-    height: 300px;
-    background: darkgray;
-}
-
-.title-lg {
-    font-size: 3.125rem;
-}
-
-
-
-
-.offset-bg {
-    max-height: calc(100% - 8rem);
-}
-
-.horizontal-list {
-    display: flex;
-    padding: 0px;
-}
-
-.filter-btn {
-    background: #b8e8b3;
-    color: #287b61;
-    border-radius: 50px;
-    padding: 5px 20px;
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
-}
-
-.filter-btn.selected {
-    background: transparent;
-    color: white;
-    background: #287b61;
-}
-
-.bg-lightgreen {
-    background: #b7e5b2;
-}
-
-
-.horizontal-list li {
-    margin-right: 10px;
-}
-
-.unstyled-list {
-    list-style: none;
-}
-
-.description {
-    position: relative;
-    top: 10px;
-}
-
-.content-container {
-    position: relative;
-    //padding: 3rem 3rem 3rem 0rem;
-}
-
-# .content-container:after {
-#     content: '';
-#     position: absolute;
-#     background: white;
-#     box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.1);
-#     top: 0; right:0; left: -12.5%; bottom: 0;
-#     z-index: -1;
-# }
-
 
 </style>

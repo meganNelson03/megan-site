@@ -9,13 +9,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>    
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-
   </head>
-
   <body class="devise <%= action_name %> <%= controller_name %>">
-    
-
-
         <section class="devise-content" style="height: 100vh; width: 100vw;">
             <%= image_tag 'circuit-board--lg.svg', class: 'bg-element w-100 h-100 object-fit-cover', style: 'z-index: 0;' %>
             <div class="container">
@@ -31,190 +26,17 @@
                 </div>
             </div>
         </section>
-
-
-
-
   </body>
 </html>
-
 
 <%= link_to root_path do %>
     <%= image_tag 'logo-dark.svg', class: 'logo' %>
 <% end %>
 
-
-
 <style>
 
-.links a {
-    font-weight: 100;
-}
-
-.links {
-    display: flex;
-    justify-content: center;
-}
-
-.links a:not(:last-of-type):after {
-    content: " | ";
-    margin: 0 .5rem;
-    color: lightgray !important;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.devise label {
-    font-weight: 100;
-    margin-bottom: 0.25rem;
-}
-
-.devise input[type="text"],
-.devise input[type="email"],
-.devise input[type="password"] {
-    width: 100%;
-    background: #bfeabb;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 15px;
-}
-
-.devise ::placeholder {
-    font-weight: 100;
-}
-
-.devise h2 {
-    display: block;
-    margin: 0 auto 1rem auto;
-    text-align: center;
-}
-
-.devise input[type="submit"] {
-    border-radius: 50px;
-    background: #287b61;
-    color: white;
-    border: none;
-    outline: none;
-    padding: 5px 25px;
-    font-weight: 700;
-    font-size: 1.25rem;
-    display: block;
-    margin: .5rem auto 1rem auto;
-}
-
-.devise input {
-    margin-bottom: 1rem;
-}
-
-.logo {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    width: 100px;
-}
-
-.section-title-big {
-    font-size: 3rem;
-}
-
-.bg-lightgreen {
-    background: #e5f7e2;
-}
-
-.devise-content .left-content {
-    z-index: -1;
-}
-
-.p-bottom {
-    top: 100%;
-    display: flex;
-    align-self: end;
-    align-items: end;
-    position: relative;
-    bottom: 0rem;
-}
-
-.big-text {
-    font-size: 1.5rem;
-    font-weight: 100;
-}
-
-.p-relative {
-    position: relative;
-}
-
-.bg-green {
-    background: #b8e8b3;
-    width: 100%;
-    height: 50vh;
-    min-height: 500px;
-    opacity: 0.25;
-}
-
-.bg-green.first {
-    top: 100%;
-}
-
-.bg-green.second {
-    bottom: 7rem;
-}
-
-
 .content-card::after {
-    position: absolute;
-    content: '';
     background-image: url(<%= image_path 'circuit-board--lg.svg' %>);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    bottom: 0rem;
-    right: -2rem;
-    top: 2rem;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.9;
-    background-color: #b8e8b3;
-}
-
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
-
-
-.content-card.dark {
-    background: white;
-    color: #202021;
-}
-
-.section-title {
-    z-index: 1;
-}
-
-.content-card {
-    position: relative;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.bg-element {
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-}
-
-.devise-content {
-    position: relative;
-    background: #b8e8b32b;
-    height: 100vh;
-    width: 100vw;
-
 }
 
 </style>

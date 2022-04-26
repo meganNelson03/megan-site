@@ -1,12 +1,12 @@
 <section class="light-section">
     <div class="container">
         <div class="row">
-            <div class="col-5">
-                <div class="bg-image offset-bg bg-lightgreen">
+            <div class="d-none d-md-block col-md-5" style="z-index: 2;">
+                <div class="bg-image offset-bg bg-lightgreen" style="z-index: 2;">
                     <%= image_tag 'circuit-board--lg.svg', class: 'h-100 w-100 object-fit-cover' %>
                 </div>
             </div>
-            <div class="col-7 padded-section-es">
+            <div class="col-12 col-md-7 padded-section-es-sm">
                 <h2 class="section-title">My Work Ethos.</h2>
                 <div  class="description content-container">
                 <p class="mb-4">
@@ -36,55 +36,3 @@
         </div>
     </div>
 </section>
-
-<style>
-
-
-.prev:hover, .next:hover {
-    opacity: 0.8;
-}
-
-.prev, .next {
-    transition: all 0.125s ease-in;
-}
-
-.bg-element.offset-top {
-    top: -2rem;
-}
-
-.bg-lightgreen {
-    background: #b7e5b2;
-}
-
-.offset-bg {
-    max-height: calc(100% - 10rem);
-}
-
-.fa-stack.icon-white .inner-icon {
-    color: #287b61;
-}
-
-.bg-image.h-80 {
-    height: 80%;
-}
-
-.description {
-    position: relative;
-    top: 10px;
-}
-
-.content-container {
-    position: relative;
-    padding: 3rem 3rem 3rem 0rem;
-}
-
-.content-container:after {
-    content: '';
-    position: absolute;
-    background: white;
-    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.1);
-    top: 0; right:0; left: -12.5%; bottom: 0;
-    z-index: -1;
-}
-
-</style>

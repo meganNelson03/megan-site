@@ -10,7 +10,7 @@ class ContactRequestsController < ApplicationController
             
 			redirect_to root_path, notice: "Yeehaw!"
 		else 
-			redirect_to under_development
+			redirect_to under_development_path
 		end        
     end 
     

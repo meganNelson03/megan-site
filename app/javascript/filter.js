@@ -1,5 +1,3 @@
-import Rails from '@rails/ujs';
-
 $(document).ready(function () {
 
     $('body').on('change', '.filters input:not([name="toggle_all"])', function() {

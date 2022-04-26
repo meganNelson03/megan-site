@@ -1,6 +1,14 @@
+.homepage {
+    p {
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+}
+
 .hero {
     height: 100vh;
     overflow: hidden;
+    min-height: 700px;
 
     .icon,
     .logo {
@@ -39,9 +47,13 @@
     }
 }
 
-
-
+.headline {
+    font-weight: 200;
+    font-size: 2rem;
+}
 .lead-text {
+    font-size: 4rem;
+    font-weight: 600;
     position: relative;
     z-index: map-get($z-index, lead-text);
 
@@ -56,5 +68,72 @@
         opacity: 0.1;
         z-index: -1;
         min-width: 100px;
+    }
+}
+
+.highlight {
+    color: #8cd388;
+}
+
+@media (max-width: 991px) {
+    .hero {
+        .headline {
+            font-size: 1.5rem !important;
+        }
+        .left-content {
+            z-index: 1 !important;
+        }
+    }
+    .btn-xl {
+        padding: .75rem 1rem !important;
+        font-size: 1.125rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .description{
+        .content-container {
+            padding: 0;
+        }
+        .content-container:after {
+            content: none;
+            padding: 0rem;
+        }
+    }
+}
+
+/* Design Block */
+
+.block {
+    height: 20px !important;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        left: 0px;
+        transform: skew(20deg);
+    }
+    &.first, &.first:after {
+        background: #287b61 !important;
+    }
+    &.second, &.second:after {
+        background: #369c7d !important;
+    }
+    &.third, &.third:after {
+        background: #b7e5b2 !important;
+    }
+    &.first:after {
+        transform-origin: -100% 0;
+    }
+    &.second:after {
+        left: -5px;
+        right: -5px;
+    }
+    &.third:after {
+        transform-origin: 0% 100%;
     }
 }

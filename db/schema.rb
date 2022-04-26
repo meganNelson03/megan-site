@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_14_144326) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_14_181241) do
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_14_144326) do
     t.boolean "active", default: false
     t.text "description"
     t.string "url"
+    t.integer "order", default: -1
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|

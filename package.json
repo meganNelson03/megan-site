@@ -9,7 +9,8 @@
     "esbuild": "^0.14.34",
     "jquery": "^3.6.0",
     "popper": "^1.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sortablejs": "^1.15.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",

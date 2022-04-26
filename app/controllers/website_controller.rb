@@ -7,6 +7,7 @@ class WebsiteController < ApplicationController
     end
 
     def about
+        
     end
 
     def under_development 
