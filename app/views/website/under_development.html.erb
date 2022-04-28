@@ -4,7 +4,7 @@
 
 <section class="under-development">
     <div class="row p-relative w-100 h-100">
-        <div class="col-5 bg-lightgreen left-content p-relative px-0">
+        <div class="col-5 bg-lightgreen left-content p-relative px-0" style="height: 100vh;">
         <%= image_tag 'circuits-btot.svg', class: 'bg-element h-100 w-100' %>
         </div>
         <div class="col-7 p-relative">
@@ -13,8 +13,8 @@
     </div>
     <div class="h-100 container">
         <div class="row centered w-100">
-            <div class="col-3"></div>
-            <div class="col-6">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <div class="content-card dark">
                     <h1 class="section-title section-title-big">Under Development</h1>
                     <p class="big-text">
@@ -22,7 +22,7 @@
                     </p> 
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
             </div>
         </div>
         <div class="row p-bottom">
@@ -37,6 +37,10 @@
 
 
 <style>
+
+footer {
+    display: none;
+}
 
 .content-card::before {
     background-image: url(<%= image_path 'circuits-rtol.svg' %>);

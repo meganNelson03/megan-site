@@ -9838,6 +9838,7 @@ footer {
     position: absolute;
     top: 3rem;
     left: 3rem;
-    width: 100px; }
+    width: 100px;
+    z-index: 99; }
 
 /*# sourceMappingURL=application.css.map */
