@@ -14,4 +14,19 @@ if Rails.env.development?
         :authentication       => :login,
         :enable_starttls_auto => true
     }
+else 
+        # SMTP settings for gmail
+
+        host = 'shielded-hollows-67867.herokuapp.com' 
+        ActionMailer::Base.delivery_method = :smtp
+        ActionMailer::Base.default_url_options = { host: host, protocol: 'http' } 
+    
+        ActionMailer::Base.smtp_settings = {
+            :address              => "smtp.gmail.com",
+            :port                 => 587,
+            :user_name            => Rails.application.credentials.dig(:email),
+            :password             => Rails.application.credentials.dig(:email_password),
+            :authentication       => :login,
+            :enable_starttls_auto => true
+        }
 end
