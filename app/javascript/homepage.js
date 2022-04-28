@@ -42,6 +42,13 @@ $(document).ready(function () {
     });
 
     $(".slidey").slick("refresh");
+
+    $('body').on('submit', 'form', function() {
+        console.log("hello")
+        $('button[type="submit"]').html('Submitting...')
+        $('button[type="submit"]').prop('disabled', true)
+    })
+
 })
 
 $(".projects-slider").slick({

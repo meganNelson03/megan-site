@@ -12,6 +12,7 @@ import "slick-carousel";
 import "@fortawesome/fontawesome-free/js/all"
 import "./homepage.js";
 import "./filter.js";
+import "./animate.js";
 
 import '../assets/stylesheets/application.css';
 

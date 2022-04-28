@@ -1,0 +1,17 @@
+setTimeout(function() {
+    $('button[type="submit"').html("Get in Touch");
+    $('button[type="submit"').prop("disabled", false);
+
+    $('.fill-with-message').html("<%= escape_javascript render('contact') %>");
+    setTimeout(function() {
+        $('.notice').addClass('animate-slide-up')
+    }, 5000)
+
+    $('.dismiss').on('click', function() {
+        $('.notice').addClass('animate-slide-up');
+    })
+
+    
+    $('.form-container').html("<%= escape_javascript render('website/form') %>");
+}, 1000);
+
