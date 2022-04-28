@@ -19,7 +19,7 @@ else
 
         host = 'shielded-hollows-67867.herokuapp.com' 
         ActionMailer::Base.delivery_method = :smtp
-        ActionMailer::Base.default_url_options = { host: host, protocol: 'http' } 
+        ActionMailer::Base.default_url_options = { host: host, protocol: 'https' } 
     
         ActionMailer::Base.smtp_settings = {
             :address              => "smtp.gmail.com",
