@@ -17,7 +17,7 @@ if Rails.env.development?
 else 
         # SMTP settings for gmail
 
-        host = 'shielded-hollows-67867.herokuapp.com' 
+        host = Rails.application.credentials.dig(:host) 
         ActionMailer::Base.delivery_method = :smtp
         ActionMailer::Base.default_url_options = { host: host, protocol: 'https' } 
     

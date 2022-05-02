@@ -1,4 +1,4 @@
-<section id="contact" class="container padding-bottom light-section padded-section-es-sm padded-section-es-md-auto">
+<section id="contact" class="container padding-bottom light-section padded-section-es-md-auto">
     <div class="row">
         <div class="col-12 col-md-5 pe-md-5">
             <h2 class="section-title">Contact Me.</h2>
@@ -19,6 +19,7 @@
                     </span>
                     </a>
                 </li>
+                <% if false %>
                 <li>
                     <%= link_to asset_path("Resume.pdf", skip_pipeline: true) do %>
                         <span class="fa-stack icon-3 icon-lg">
@@ -27,6 +28,7 @@
                         </span>
                     <% end %>
                 </li>
+                <% end %>
                 <li>
                     <a href="mailto:<%= EMAIL %>">
                         <span class="fa-stack icon-4 icon-lg">

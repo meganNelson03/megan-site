@@ -8898,6 +8898,32 @@ footer {
   color: #b8e8b3; }
 
 /* Filters / Forms */
+.field_with_errors {
+  position: relative; }
+  .field_with_errors input,
+  .field_with_errors textarea {
+    border-bottom: 2px solid #359c7d !important; }
+  .field_with_errors input {
+    height: 44px; }
+  .field_with_errors:after {
+    content: '!';
+    position: absolute;
+    top: 10px;
+    right: 0.5rem;
+    z-index: 1;
+    font-weight: 400;
+    color: white;
+    background: #359c7d;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 1rem;
+    opacity: 0.5; }
+
 .form-group {
   margin-bottom: 1.5rem; }
   .form-group input,
@@ -8999,6 +9025,9 @@ footer {
 
 .projects .padded-section, .about .padded-section {
   padding: 2rem; }
+
+.pt-7 {
+  padding-top: 5rem !important; }
 
 @media (max-width: 567px) {
   .padded-section-es {
@@ -9331,19 +9360,20 @@ table {
     transform: scaleX(0);
     -webkit-transition: -webkit-transform 0.2s ease-in;
     transition: transform 0.2s ease-in; }
-  #main-nav .nav-link:hover + span {
-    position: absolute;
-    height: 12px;
-    bottom: 0;
-    left: -5px;
-    right: 5px;
-    background-color: #242f2c;
-    opacity: 0.7;
-    z-index: -1;
-    width: 100%;
-    -webkit-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    transform: scaleX(1); }
+  @media (min-width: 991px) {
+    #main-nav .nav-link:hover + span {
+      position: absolute;
+      height: 12px;
+      bottom: 0;
+      left: -5px;
+      right: 5px;
+      background-color: #242f2c;
+      opacity: 0.7;
+      z-index: -1;
+      width: 100%;
+      -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      transform: scaleX(1); } }
   #main-nav .nav-item a {
     color: white; }
 
@@ -9417,6 +9447,93 @@ footer {
     padding: 0 2rem; }
     footer .footer-text {
       font-size: .75rem; } }
+/* Mobile */
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  padding: 10px; }
+  .navbar-toggler .icon-bar {
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+    display: block;
+    transition: all 0.2s; }
+  .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%; }
+  .navbar-toggler .middle-bar {
+    opacity: 0; }
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%; }
+  .navbar-toggler .icon-bar + .icon-bar {
+    margin-top: 4px; }
+  .navbar-toggler:hover {
+    background: transparent !important; }
+  .navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important; }
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0); }
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1; }
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0); }
+
+.user-icon {
+  color: white; }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.5rem .75rem; }
+
+  .navbar-collapse .container {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .navbar-collapse.show, .navbar-collapse.collapsing {
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.3);
+    background: #297b62 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999; }
+    .navbar-collapse.show .navbar-nav, .navbar-collapse.collapsing .navbar-nav {
+      padding: 40px 40px 20px; } }
+@media (min-width: 991px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .navbar-expand-md .navbar-nav .nav-link:hover {
+      color: blue; } }
+#main-nav .navbar-toggler {
+  position: absolute; }
+
+.navbar-toggler {
+  z-index: 9999;
+  box-shadow: none;
+  right: 1rem;
+  top: 1rem; }
+  .navbar-toggler .icon-bar {
+    box-shadow: none; }
+
+#secondary-nav .collapsed .icon-bar {
+  background-color: #297b62; }
+
+@media (max-width: 991px) {
+  #secondary-nav .nav-item .link {
+    position: relative;
+    margin-left: 0rem; }
+
+  #secondary-nav .nav-item a {
+    color: white;
+    font-weight: 100; } }
 .homepage p {
   font-size: 18px;
   margin-bottom: 0px; }

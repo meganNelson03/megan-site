@@ -1,4 +1,6 @@
-<%= form_for @contact_request, url: contact_request_path, remote: true do |f| %>
+<%= form_for @contact_request, format: :js, url: contact_request_path, method: :post, remote: true do |f| %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    
     <div class="form-group">
         <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
     </div>
@@ -16,42 +18,3 @@
         Get in Touch
     <% end %>
 <% end %>
-
-<style>
-
-
-
-.field_with_errors input,
-.field_with_errors textarea {
-    border-bottom: 2px solid #359c7d;
-}
-
-.field_with_errors input {
-    height: 44px;
-}
-
-.field_with_errors {
-    position: relative;
-}
-
-.field_with_errors:after {
-    content: '!';
-    position: absolute;
-    top: 10px;
-    right: 0.5rem;
-    z-index: 1;
-    font-weight: 400;
-    color: white;
-    background: #359c7d;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    font-size: 1rem;
-    opacity: 0.5;
-}
-
-</style>

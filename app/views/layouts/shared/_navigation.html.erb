@@ -3,12 +3,14 @@
       <%= link_to root_path do %>
         <%= image_tag 'logo-dark.svg', class: 'logo', width: '50px' %>
       <% end %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
       </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse mb-2" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-lg-0">
           <li class="nav-item">
             <div class="link">
               <%= link_to about_path, class: 'nav-link active' do %>About Me<% end %>

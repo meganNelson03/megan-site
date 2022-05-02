@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+
+    $('body').bind("ajax:complete", "form", function(event, xhr, status) {
+        $("form")[0].reset();
+    })
+
     $(".skills-slider").slick({
         infinite: true,
         autoplay: true,
@@ -17,6 +22,14 @@ $(document).ready(function () {
                 breakpoint: 991,
                 settings: {
                     slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true,
+                    arrows: false,
                 }
             },
             {
@@ -41,13 +54,14 @@ $(document).ready(function () {
         dots: false,
     });
 
-    $(".slidey").slick("refresh");
-
     $('body').on('submit', 'form', function() {
-        console.log("hello")
         $('button[type="submit"]').html('Submitting...')
         $('button[type="submit"]').prop('disabled', true)
     })
+
+    $(".new_contact_request").bind("ajax:complete", function(event,xhr,status){
+        $('input').val('');
+      });
 
 })
 

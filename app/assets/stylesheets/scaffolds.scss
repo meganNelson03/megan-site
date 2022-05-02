@@ -308,6 +308,38 @@ footer {
 
 /* Filters / Forms */
 
+.field_with_errors {
+  position: relative;
+
+  input,
+  textarea {
+    border-bottom: 2px solid #359c7d !important;
+  }
+  input {
+    height: 44px;
+  }
+
+  &:after {
+    content: '!';
+    position: absolute;
+    top: 10px;
+    right: 0.5rem;
+    z-index: 1;
+    font-weight: 400;
+    color: white;
+    background: #359c7d;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 
@@ -463,6 +495,10 @@ footer {
   .padded-section {
     padding: 2rem;
   }
+}
+
+.pt-7 {
+  padding-top: 5rem !important;
 }
 
 @media (max-width: 567px) {

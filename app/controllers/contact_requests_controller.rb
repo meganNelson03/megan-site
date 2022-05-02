@@ -13,9 +13,9 @@ class ContactRequestsController < ApplicationController
                 format.js { render 'contact' }
             else
                 if params[:contact_request][:name].blank? || params[:contact_request][:email].blank? || params[:contact_request][:message].blank? 
-                    flash[:error] = "Please correct the errors below, all fields are required."
+                    flash[:notice] = "Please correct the errors below, all fields are required."
                 else
-                    flash[:error] = "Sorry, something went wrong. Please try again later."
+                    flash[:notice] = "Sorry, something went wrong. Please try again later."
                 end
 
                 format.js { render 'error' }
