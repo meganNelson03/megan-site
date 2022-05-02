@@ -25,6 +25,16 @@
 
 <style>
 
+@media (max-width: 991px) {
+
+    .description {
+        padding: 0px;
+    }
+    .description:after {
+        content: none !important;
+    }
+}
+
 .project-image-container:after {
     background-image: url(<%= asset_path 'circuit-board--lg.svg' %>);
 }
