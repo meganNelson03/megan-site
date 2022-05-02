@@ -1,6 +1,6 @@
 <%= form_tag projects_path, :id => "filter-form", remote: true do |f| %>
     <% if params[:categories].present? %>
-        <%= select_tag "previous_categories[]", options_for_select(params[:categories].compact_blank, params[:categories].compact_blank), {multiple: true, class: 'd-none'} %>
+        <%= select_tag "previous_categories[]", [], {multiple: true, class: 'd-none'} %>
     <% end %>
     <div class="filters">
         <ul class="unstyled-list horizontal-list">

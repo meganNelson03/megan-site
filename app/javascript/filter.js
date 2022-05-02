@@ -33,6 +33,15 @@ function toggle_all() {
                 nextArrow:"<div class='next'><span></span></div>",
                 adaptiveHeight: false,
                 dots: false,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                        arrows: false,
+                        dots: true,
+                        }
+                    }
+                ]
             });
         }
     });
@@ -59,6 +68,15 @@ function update_projects() {
                 nextArrow:"<div class='next'><span></span></div>",
                 adaptiveHeight: false,
                 dots: false,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                        arrows: false,
+                        dots: true,
+                        }
+                    }
+                ]
             });
         }
     });
@@ -85,6 +103,15 @@ function update_filters() {
                 nextArrow:"<div class='next'><span></span></div>",
                 adaptiveHeight: false,
                 dots: false,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                        arrows: false,
+                        dots: true,
+                        }
+                    }
+                ]
             });
         }
     });

@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
     def index
         @categories = Category.all
         
-        if params[:categories].present?
+        if params[:categories].present? && !(params[:previous_categories] == params[:categories])
             @projects = Project.where(
                             id: Project.joins(:categories).where(categories: {id: params[:categories]})
                             ).where(active: true)

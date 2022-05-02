@@ -9400,19 +9400,20 @@ table {
     transform: scaleX(0);
     -webkit-transition: -webkit-transform 0.2s ease-in;
     transition: transform 0.2s ease-in; }
-  #secondary-nav .nav-link:hover + span {
-    position: absolute;
-    height: 12px;
-    bottom: 0;
-    left: -5px;
-    right: 5px;
-    background-color: #b8e8b3;
-    opacity: 0.7;
-    z-index: -1;
-    width: 100%;
-    -webkit-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    transform: scaleX(1); }
+  @media (max-width: 991px) {
+    #secondary-nav .nav-link:hover + span {
+      position: absolute;
+      height: 12px;
+      bottom: 0;
+      left: -5px;
+      right: 5px;
+      background-color: #b8e8b3;
+      opacity: 0.7;
+      z-index: -1;
+      width: 100%;
+      -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+      transform: scaleX(1); } }
 
 .under_development .navbar {
   display: none !important; }
