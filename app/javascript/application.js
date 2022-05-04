@@ -4,7 +4,6 @@ import './jquery-init';
 import Rails from '@rails/ujs';
 Rails.start();
 
-//import "popper";
 import "jquery";
 import "bootstrap";
 import "slick-carousel";
