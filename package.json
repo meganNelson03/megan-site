@@ -14,7 +14,7 @@
     "sortablejs": "^1.15.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",
+    "build": "esbuild app/assets/javascript/*.* --bundle --outdir=app/assets/builds --minify",
     "build:css": "sass ./app/assets/stylesheets/application.scss --load-path=node_modules",
     "start": "node esbuild-dev.config.js"
   },

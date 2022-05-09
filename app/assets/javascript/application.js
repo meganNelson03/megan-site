@@ -4,7 +4,6 @@ import './jquery-init';
 import Rails from '@rails/ujs';
 Rails.start();
 
-import "jquery";
 import "bootstrap";
 import "slick-carousel";
 
@@ -13,4 +12,5 @@ import "./homepage.js";
 import "./filter.js";
 import "./animate.js";
 
-import '../assets/stylesheets/application.css';
+import '../stylesheets/application.css';
+

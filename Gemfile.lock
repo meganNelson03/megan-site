@@ -292,7 +292,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  uglifier (~> 4.1)
+  uglifier
   web-console
   webdrivers
 
